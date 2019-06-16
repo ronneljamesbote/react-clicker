@@ -1,0 +1,32 @@
+.control {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 150%;
+  opacity: 0.9;
+  outline: none;
+  padding: 1rem 2rem;
+
+  &.increment {
+    background: #28a745;
+  }
+
+  &.decrement {
+    background: #dc3545;
+  }
+
+  &.reset {
+    background: #ffc107;
+    color: #000;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    font-size: 250%;
+    padding: 1.5rem 3rem;
+  }
+}
