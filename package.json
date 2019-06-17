@@ -1,7 +1,7 @@
 {
   "name": "react-clicker",
   "version": "1.0.0",
-  "description": "A sample react application.",
+  "description": "A clicker/counter application using reactjs",
   "author": "Ronnel James Miranda Bote <ronneljamesbote> (https://github.com/ronneljamesbote)",
   "license": "MIT",
   "dependencies": {

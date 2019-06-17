@@ -1,6 +1,6 @@
 # react-clicker
 
-A sample clicker/counter application using [ReactJS](https://reactjs.org/).
+A clicker/counter application using [ReactJS](https://reactjs.org/).
 
 Check [here](https://react-clicker-sample.web.app/) for live demo.
 
@@ -10,7 +10,6 @@ Check [here](https://react-clicker-sample.web.app/) for live demo.
 - [ReactJS](https://reactjs.org/) - A javascript library developed by Facebook
 - [Create React App](https://facebook.github.io/create-react-app/) - Ready to use ReactJS boilerplate
 - [SASS](https://sass-lang.com/) - A CSS preprocessor
-- [Firebase](https://firebase.google.com/) - A mobile and web application development platform by Google
 
 ## Getting Started
 
