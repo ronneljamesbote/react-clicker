@@ -2,7 +2,7 @@
 
 A clicker/counter application using [ReactJS](https://reactjs.org/).
 
-Check [here](https://react-clicker-sample.web.app/) for live demo.
+Check [here](https://sample-react-projects.web.app/react-clicker) for live demo.
 
 ## Developed With
 
