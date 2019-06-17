@@ -1,6 +1,6 @@
-# react-clicker
+# react-clicker-redux
 
-A clicker/counter application using [ReactJS](https://reactjs.org/).
+A clicker/counter application using [ReactJS](https://reactjs.org/) with [Redux](https://redux.js.org/).
 
 Check [here](https://react-clicker-sample.web.app/) for live demo.
 
@@ -9,6 +9,7 @@ Check [here](https://react-clicker-sample.web.app/) for live demo.
 - [Node.js](https://nodejs.org/en/) - Javascript runtime
 - [ReactJS](https://reactjs.org/) - A javascript library developed by Facebook
 - [Create React App](https://facebook.github.io/create-react-app/) - Ready to use ReactJS boilerplate
+- [Redux](https://redux.js.org/) - State management library
 - [SASS](https://sass-lang.com/) - A CSS preprocessor
 
 ## Getting Started

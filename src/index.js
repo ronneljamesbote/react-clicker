@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import Layout from "./components/layout";
 import App from "./containers/app";
 import * as serviceWorker from "./serviceWorker";
+import store from "./store.js";
 
 ReactDOM.render(
-  <Layout>
-    <App />
-  </Layout>,
+  <Provider store={store}>
+    <Layout>
+      <App />
+    </Layout>
+  </Provider>,
   document.getElementById("root")
 );
 

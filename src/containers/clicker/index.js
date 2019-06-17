@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { appLoad } from "../../actions/app-actions";
+import { decrement, increment, reset } from "../../actions/counter-action";
 import ControlPanel from "../../components/controlPanel";
 import CounterIndicator from "../../components/counterIndicator";
 import styles from "./styles.module.scss";
@@ -8,29 +11,35 @@ class Clicker extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
-      controls: [
-        { type: "decrement", handler: this.handleDecrementCounter },
-        { type: "reset", handler: this.handleResetCounter },
-        { type: "increment", handler: this.handleIncrementCounter }
-      ]
+      controls: []
     };
   }
 
-  handleDecrementCounter = () => {
-    this.setState((prevState) => ({ counter: prevState.counter - 1 }));
-  };
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (
+      !prevState.controls.length &&
+      nextProps.decrementCounter &&
+      nextProps.incrementCounter &&
+      nextProps.resetCounter
+    ) {
+      return {
+        ...prevState,
+        controls: [
+          { type: "decrement", handler: nextProps.decrementCounter },
+          { type: "reset", handler: nextProps.resetCounter },
+          { type: "increment", handler: nextProps.incrementCounter }
+        ]
+      };
+    } else return null;
+  }
 
-  handleIncrementCounter = () => {
-    this.setState((prevState) => ({ counter: prevState.counter + 1 }));
-  };
-
-  handleResetCounter = () => {
-    this.setState({ counter: 0 });
-  };
+  componentDidMount() {
+    this.props.loadApp();
+  }
 
   render() {
-    const { counter, controls } = this.state;
+    const { controls } = this.state;
+    const { counter } = this.props;
 
     return (
       <div className={styles.clicker}>
@@ -43,4 +52,31 @@ class Clicker extends Component {
   }
 }
 
-export default Clicker;
+const mapStateToProps = ({ App, Counter }, ownProps) => {
+  return {
+    load: App,
+    counter: Counter
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadApp: () => {
+      dispatch(appLoad());
+    },
+    decrementCounter: () => {
+      dispatch(decrement());
+    },
+    incrementCounter: () => {
+      dispatch(increment());
+    },
+    resetCounter: () => {
+      dispatch(reset());
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Clicker);
