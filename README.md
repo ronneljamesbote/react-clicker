@@ -2,7 +2,11 @@
 
 A clicker/counter application using [ReactJS](https://reactjs.org/) with [Redux](https://redux.js.org/).
 
+<<<<<<< HEAD
 Check [here](https://sample-react-projects.web.app/react-clicker-redux) for live demo.
+=======
+Check [here](https://sample-react-projects.web.app/react-clicker) for live demo.
+>>>>>>> d22e8ef59513b9f8abbe90d10256f7e8be562292
 
 ## Developed With
 
