@@ -1,13 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 import React from "react";
 import styles from "./styles.module.scss";
 
-function control({
-  className = "",
-  onClick,
-  type = "increment",
-  ...restProps
-}) {
+control.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
+  className: PropTypes.string
+};
+
+control.defaultProps = {
+  className: ""
+};
+
+function control({ className, onClick, type, ...restProps }) {
   const classes = [styles.control, className, styles[type]];
 
   let symbol = "";
