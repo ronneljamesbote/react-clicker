@@ -1,7 +1,17 @@
+import PropTypes from "prop-types";
 import React from "react";
 import styles from "./styles.module.scss";
 
-function counterIndicator({ className = "", counter = 0, ...restProps }) {
+counterIndicator.propTypes = {
+  counter: PropTypes.number.isRequired,
+  className: PropTypes.string
+};
+
+counterIndicator.defaultProps = {
+  className: ""
+};
+
+function counterIndicator({ className, counter, ...restProps }) {
   const classes = [styles.counterIndicator, className];
 
   return (

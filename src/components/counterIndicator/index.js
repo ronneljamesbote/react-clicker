@@ -1,1 +1,1 @@
-export { default } from "./controlIndicator";
+export { default } from "./counterIndicator";
